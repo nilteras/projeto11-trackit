@@ -1,13 +1,18 @@
-import { useState } from 'react'
-import Login from './pages/Login'
-
+import Login from './pages/FirstPage/Login'
+import Cadastro from './pages/FirstPage/Cadastro'
+import Hoje from './pages/SecondPage/Hoje'
 
 function App() {
   
 
   return (
     <>
-    <Login />
+    {/* <Login /> */}
+    {/* <Cadastro /> */}
+    <Hoje />
+    {/* <Historico /> */}
+
+
     </>
   )
 }
