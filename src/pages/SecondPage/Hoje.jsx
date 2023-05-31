@@ -1,17 +1,14 @@
 import React from 'react'
-import { Header, ImagemLogin, Titulo, ContainerMain, Data, HabitosDiv, HabitosText, CheckDiv , Menu, HojeDiv} from './style'
+import { ContainerMain, Data, HabitosDiv, HabitosText, CheckDiv } from './style'
+import HeaderTop from '../../components/Header/HeaderTop'
+import MenuMain from '../../components/Menu/MenuMain'
 
 export default function Hoje() {
   return (
     <>
 
-      <Header>
-        <Titulo>TrackIt</Titulo>
-        <ImagemLogin>
-          <img src='https://www.globalempregos.com.br/wp-content/uploads/2022/01/habitos.jpg' alt='image' />
-        </ImagemLogin>
-      </Header>
-
+      <HeaderTop />
+        
       <ContainerMain>
         <Data><h1>Segunda, 17/05</h1></Data>
         <p>Nenhum hábito concluido ainda</p>
@@ -33,12 +30,7 @@ export default function Hoje() {
       </ContainerMain>
 
 
-      <Menu>
-        <p>Hábitos</p>
-        <HojeDiv>Hoje</HojeDiv>
-        <p>Histórico</p>
-      </Menu>
-
+      <MenuMain />
     </>
 
   )
