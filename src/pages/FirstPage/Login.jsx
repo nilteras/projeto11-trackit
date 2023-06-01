@@ -1,24 +1,27 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Container, Logo, FormContainer, TextoCadastro } from './style'
 import { Link } from 'react-router-dom'
+import LogoTI from './../../assets/Logo_PNG.png'
 
 export default function Login() {
   return (
     <Container>
-      <Logo>Logo</Logo>
+      <Logo>
+        <img src={LogoTI} alt='logo' />
+      </Logo>
       <h1>TrackIt</h1>
 
       <FormContainer>
-        <input type='text' placeholder='email'></input>
-        <input type='text' placeholder='senha'></input>
-        <Link to={'/hoje'}>
-          <div>
+        <input
+          type='email'
+          placeholder='email' />
 
-            <button>Entrar</button>
+        <input
+          type='password'
+          placeholder='senha' />
 
-          </div>
-        </Link>
+
+        <button type='submit' >Entrar</button>
       </FormContainer>
       <Link to={'/cadastro'}>
         <TextoCadastro>Não tem uma conta? Cadastre-se!</TextoCadastro>

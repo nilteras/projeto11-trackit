@@ -21,11 +21,10 @@ export const Container = styled.div`
 export const Logo = styled.div`
     width: 180px;
     height: 90px;
-    background: #52B6FF;
     margin-top: 68px;
 `;
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.form`
     width: calc(100vw - 40px); 
     display: flex;
     flex-direction: column;
@@ -66,7 +65,6 @@ export const FormContainer = styled.div`
       line-height: 25px;
 
 
-      color: #DBDBDB;
 
 
     }
