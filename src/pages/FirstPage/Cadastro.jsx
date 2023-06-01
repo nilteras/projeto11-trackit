@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Logo, FormContainer, TextoCadastro } from './style'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import LogoTI from './../../assets/Logo_PNG.png'
 import axios from 'axios'
 
@@ -11,31 +11,33 @@ export default function Cadastro() {
   const [name, setName] = useState('')
   const [image, setImage] = useState('')
   const [logged, setLogged] = useState(false)
+  const navigate = useNavigate();
 
   function registerUser(e) {
     e.preventDefault()
     setLogged(true)
-   
-    const informations = { 
+
+    const informations = {
       email: email,
       name: name,
       image: image,
-      password: password  
+      password: password
     }
 
     const urlPost = 'https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up'
-     axios.post(urlPost, informations)
-     .then( res => {
+    axios.post(urlPost, informations)
+      .then(res => {
         console.log(res)
+        navigate('/')
       })
-     .catch(erro => {
-      alert(erro.response.data.message)
-      setLogged(false)
-      setEmail('')
-      setPassword('')
-      setName('')
-      setImage('')
-     }) 
+      .catch(erro => {
+        alert(erro.response.data.message)
+        setLogged(false)
+        setEmail('')
+        setPassword('')
+        setName('')
+        setImage('')
+      })
 
 
   }
@@ -94,10 +96,9 @@ export default function Cadastro() {
         ) : (
           <button
             data-test="signup-btn"
-            type='submit'
-            disabled="disabled" 
-            //colocar imagem carregando aq e tirar o nome cadastrar
-            >
+            disabled="disabled"
+          //colocar imagem carregando aq e tirar o nome cadastrar
+          >
             Cadastrar
           </button>
         )}
