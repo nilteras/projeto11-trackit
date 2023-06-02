@@ -6,22 +6,22 @@ import { CircularProgressbar } from 'react-circular-progressbar'
 
 export default function MenuMain() {
  
-  const porcentagem = 55;
+  const porcentagem = 'Hoje';
 
   return (
-    <Menu>
+    <Menu data-test="menu">
 
-      <Link to={'/habitos'}>
+      <Link to={'/habitos'} data-test="habit-link">
         <p>Hábitos</p>
       </Link>
 
-      <Link to={'/hoje'}>
+      <Link to={'/hoje'} data-test="today-link">
         <HojeDiv>
-          <CircularProgressbar value={porcentagem} text={`${porcentagem}%`} />
+          <CircularProgressbar value={porcentagem} text='' />
         </HojeDiv>
       </Link>
       
-      <Link to={'/historico'}>
+      <Link to={'/historico'} data-test="history-link">
         <p>Histórico</p>
       </Link>
     </Menu>

@@ -8,7 +8,7 @@ import AuthorizationContext from './../../context/AuthorizationContext'
 import { ThreeDots } from 'react-loader-spinner'
 
 
- 
+
 export default function Login() {
 
   const [email, setEmail] = useState('')
@@ -23,28 +23,28 @@ export default function Login() {
     e.preventDefault();
     setLogged(true)
 
-    const informations = {email: email, password: password}
+    const informations = { email: email, password: password }
 
     const urlPost = "https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login";
 
     axios.post(urlPost, informations)
-    .then(res => {
-      console.log(res.data)
-      setimageProfile(res.data.image)
-      setToken(res.data.token)
-      console.log(res.data.token)
-      navigate('/hoje')
+      .then(res => {
+        console.log(res.data)
+        setimageProfile(res.data.image)
+        setToken(res.data.token)
+        console.log(res.data.token)
+        navigate('/hoje')
 
-    })
-    .catch(erro => {
-      alert(erro.response.data.message)
-      setLogged(false)
-      setEmail('')
-      setPassword('')
+      })
+      .catch(erro => {
+        alert(erro.response.data.message)
+        setLogged(false)
+        setEmail('')
+        setPassword('')
 
-    })
+      })
 
-    
+
   }
 
   return (
@@ -73,12 +73,12 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          
-          />
+
+        />
         {!logged ? (
-           <button data-test="login-btn" type='submit' >Entrar</button>
+          <button data-test="login-btn" type='submit' >Entrar</button>
         ) : (
-          <ButtonDiv data-test="login-btn" disabled="disabled"> 
+          <ButtonDiv data-test="login-btn" disabled="disabled">
             <ThreeDots
               height="13"
               width="51"
@@ -91,7 +91,7 @@ export default function Login() {
             />
           </ButtonDiv>
         )}
-       
+
       </FormContainer>
       <Link to={'/cadastro'}>
         <TextoCadastro data-test="singup-link">Não tem uma conta? Cadastre-se!</TextoCadastro>

@@ -9,10 +9,10 @@ export default function HeaderTop() {
 
     return (
 
-        <Header>
+        <Header data-test="header">
             <Titulo>TrackIt</Titulo>
             <ImagemLogin>
-                <img src={imageProfile} alt='image' />
+                <img data-test="avatar" src={imageProfile} alt='image' />
             </ImagemLogin>
         </Header>
     )

@@ -10,11 +10,11 @@ export default function Hoje() {
       <HeaderTop />
         
       <ContainerMain>
-        <Data>Segunda, 17/05</Data>
-        <p>Nenhum hábito concluido ainda</p>
+        <Data data-test="today" >Segunda, 17/05</Data>
+        <p data-test="today-counter">Nenhum hábito concluido ainda</p>
 
 
-        <HabitosDiv>
+        <HabitosDiv data-test="today-habit-container">
 
           <HabitosText>
             <h1>Ler 1 capitulo de livro</h1>

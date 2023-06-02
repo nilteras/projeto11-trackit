@@ -10,12 +10,12 @@ export default function Habitos() {
       <ContainerMain>
         <Title>
           <h1>Meus Hábitos</h1>
-          <Add>+</Add>
+          <Add data-test="habit-create-btn">+</Add>
         </Title>
-        <NewHabit>
-          <input type='text' placeholder='nome do hábito'></input>
+        <NewHabit data-test="habit-create-container">
+          <input data-test="habit-name-input" type='text' placeholder='nome do hábito'></input>
           <DaysDiv>
-            <Days>D</Days>
+            <Days data-test="habit-day" >D</Days>
             <Days>S</Days>
             <Days>T</Days>
             <Days>Q</Days>
@@ -24,8 +24,8 @@ export default function Habitos() {
             <Days>S</Days>
           </DaysDiv>
           <ButtonDiv>
-            <div>Cancelar</div>
-            <button>Salvar </button>
+            <div data-test="habit-create-cancel-btn" >Cancelar</div>
+            <button data-test="habit-create-save-btn">Salvar </button>
           </ButtonDiv>
         </NewHabit>
         <p>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</p>
