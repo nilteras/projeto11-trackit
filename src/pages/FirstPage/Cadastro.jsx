@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { Container, Logo, FormContainer, TextoCadastro } from './style'
+import { Container, Logo, FormContainer, TextoCadastro, ButtonDiv} from './style'
 import { Link, useNavigate } from 'react-router-dom'
 import LogoTI from './../../assets/Logo_PNG.png'
 import axios from 'axios'
+import { ThreeDots } from 'react-loader-spinner'
 
 export default function Cadastro() {
 
@@ -94,13 +95,18 @@ export default function Cadastro() {
             Cadastrar
           </button>
         ) : (
-          <button
-            data-test="signup-btn"
-            disabled="disabled"
-          //colocar imagem carregando aq e tirar o nome cadastrar
-          >
-            Cadastrar
-          </button>
+          <ButtonDiv data-test="login-btn" disabled="disabled"> 
+            <ThreeDots
+              height="13"
+              width="51"
+              radius="g"
+              color='white'
+              ariaLabel='three-dots-loading'
+              wrapperStyle={{}}
+              wrapperClass=""
+
+            />
+          </ButtonDiv>
         )}
 
 

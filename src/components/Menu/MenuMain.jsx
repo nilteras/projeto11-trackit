@@ -1,8 +1,13 @@
 import React from 'react'
 import { Menu, HojeDiv } from './StyleMenu'
 import { Link } from 'react-router-dom'
+import { CircularProgressbar } from 'react-circular-progressbar'
+
 
 export default function MenuMain() {
+ 
+  const porcentagem = 55;
+
   return (
     <Menu>
 
@@ -11,7 +16,9 @@ export default function MenuMain() {
       </Link>
 
       <Link to={'/hoje'}>
-        <HojeDiv>Hoje</HojeDiv>
+        <HojeDiv>
+          <CircularProgressbar value={porcentagem} text={`${porcentagem}%`} />
+        </HojeDiv>
       </Link>
       
       <Link to={'/historico'}>

@@ -10,7 +10,7 @@ export default function Hoje() {
       <HeaderTop />
         
       <ContainerMain>
-        <Data><h1>Segunda, 17/05</h1></Data>
+        <Data>Segunda, 17/05</Data>
         <p>Nenhum hábito concluido ainda</p>
 
 

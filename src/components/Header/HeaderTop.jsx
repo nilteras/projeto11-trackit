@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Header, ImagemLogin, Titulo } from './StyleHeader'
+import ImageContext from './../../context/ImageContext'
 
 export default function HeaderTop() {
+
+    const [imageProfile] = useContext(ImageContext)
+
+
     return (
 
         <Header>
             <Titulo>TrackIt</Titulo>
             <ImagemLogin>
-                <img src='https://www.globalempregos.com.br/wp-content/uploads/2022/01/habitos.jpg' alt='image' />
+                <img src={imageProfile} alt='image' />
             </ImagemLogin>
         </Header>
     )

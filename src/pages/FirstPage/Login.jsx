@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react'
-import { Container, Logo, FormContainer, TextoCadastro } from './style'
+import { Container, Logo, FormContainer, TextoCadastro, ButtonDiv } from './style'
 import { Link, useNavigate } from 'react-router-dom'
 import LogoTI from './../../assets/Logo_PNG.png'
 import axios from 'axios'
 import ImageContext from './../../context/ImageContext'
 import AuthorizationContext from './../../context/AuthorizationContext'
+import { ThreeDots } from 'react-loader-spinner'
+
 
  
 export default function Login() {
@@ -76,11 +78,18 @@ export default function Login() {
         {!logged ? (
            <button data-test="login-btn" type='submit' >Entrar</button>
         ) : (
-          <button data-test="login-btn" disabled="disabled" 
-          //colcoar imagem loading
-          >Entrar
-          {/* <img src={loading} /> */}
-          </button>
+          <ButtonDiv data-test="login-btn" disabled="disabled"> 
+            <ThreeDots
+              height="13"
+              width="51"
+              radius="g"
+              color='white'
+              ariaLabel='three-dots-loading'
+              wrapperStyle={{}}
+              wrapperClass=""
+
+            />
+          </ButtonDiv>
         )}
        
       </FormContainer>

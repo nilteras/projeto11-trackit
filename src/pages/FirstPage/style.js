@@ -31,7 +31,21 @@ export const FormContainer = styled.form`
     align-items: center;
     margin: 30px 0;
 
-    button {
+    input {
+      width: 303px;
+      height: 45px;
+      margin-bottom: 6px;
+      background: #FFFFFF;
+      border: 1px solid #D5D5D5;
+      border-radius: 5px;
+
+      font-family: 'Lexend Deca';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+    }
+      button {
         align-self: center;
         background: #52B6FF;
         border: 1px solid #D5D5D5;
@@ -47,27 +61,22 @@ export const FormContainer = styled.form`
 
         color: #FFFFFF;
 
-
-
     }
-    input {
-      width: 303px;
-      height: 45px;
-      margin-bottom: 6px;
-      background: #FFFFFF;
-      border: 1px solid #D5D5D5;
-      border-radius: 5px;
+`;
 
-      font-family: 'Lexend Deca';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 25px;
+export const ButtonDiv = styled.div`
+ 
+        background: #52B6FF;
+        border: 1px solid #D5D5D5;
+        border-radius: 5px;
+        width: 303px;
+        height: 45px;
+        text-align: center;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-
-
-    }
 `;
 
 export const TextoCadastro = styled.p`
