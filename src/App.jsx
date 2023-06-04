@@ -8,7 +8,7 @@ import ImageContext from './context/ImageContext'
 import AuthorizationContext from './context/AuthorizationContext'
 import { useState } from 'react'
 
-function App() {
+export default function App() {
 
   const [imageProfile, setImageProfile] = useState('')
   const [token, setToken] = useState('')
@@ -32,4 +32,3 @@ function App() {
   )
 }
 
-export default App

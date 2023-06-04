@@ -67,8 +67,17 @@ export const HabitosText = styled.div`
 export const CheckDiv = styled.div`
     width: 69px;
     height: 69px;
-    background: #EBEBEB;
+    background: #EBEBEB; 
+    /* background-color: #8FC549; */
     border: 1px solid #E7E7E7;
     border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+
+    }
 `;
 

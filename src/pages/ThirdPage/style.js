@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 
+
 export const ContainerMain = styled.div`
     display: flex;
     flex-direction: column;
@@ -42,7 +43,7 @@ export const Title = styled.div`
     }
 `;
 
-export const Add = styled.div`
+export const AddButton = styled.div`
     width: 40px;
     height: 35px;
     background: #52B6FF;
@@ -54,6 +55,7 @@ export const Add = styled.div`
     font-weight: 400;
     font-size: 27px;
     line-height: 34px;
+    cursor: pointer;
    
     text-align: center;
 
@@ -81,7 +83,7 @@ export const NewHabit = styled.div`
         font-weight: 400;
         font-size: 20px;
         line-height: 25px;
-        color: #DBDBDB;
+      
     }
    
 `;
@@ -90,7 +92,7 @@ export const Days = styled.div`
     width: 30px;
     height: 30px;
     margin: 8px 4px 0 0;
-    background: #FFFFFF;
+    background: ${props => props.status.background};
     border: 1px solid #D5D5D5;
     border-radius: 5px;
     text-align: center;
@@ -113,6 +115,7 @@ export const ButtonDiv = styled.div`
     display: flex;
     justify-content: flex-end;
     margin-top: 29px;
+    cursor: pointer;
 
     button {
         width: 84px;
@@ -126,7 +129,7 @@ export const ButtonDiv = styled.div`
         font-size: 16px;
         line-height: 20px;
         text-align: center;
-
+        cursor: pointer;
         color: #FFFFFF;
     }
     div {
@@ -145,3 +148,4 @@ export const ButtonDiv = styled.div`
         color: #52B6FF;
     }
 `;
+

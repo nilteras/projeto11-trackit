@@ -1,33 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HeaderTop from './../../components/Header/HeaderTop'
 import MenuMain from './../../components/Menu/MenuMain'
-import { ContainerMain, Add, Title, NewHabit, Days, DaysDiv, ButtonDiv } from './style'
+import { ContainerMain, AddButton, Title, NewHabit, Days, DaysDiv, ButtonDiv } from './style'
+import plus from './../../assets/plus.svg'
+import AddNewHabit from '../../components/AddNewHabit'
+
+
 
 export default function Habitos() {
+
+  const [add, setAdd] = useState(false);
+
+  function addTask(){
+    setAdd(true);
+  }
+
   return (
     <>
       <HeaderTop />
       <ContainerMain>
         <Title>
           <h1>Meus Hábitos</h1>
-          <Add data-test="habit-create-btn">+</Add>
+          <AddButton 
+          data-test="habit-create-btn" 
+          onClick={(addTask)}>
+            <img src={plus} />
+          </AddButton>
         </Title>
-        <NewHabit data-test="habit-create-container">
-          <input data-test="habit-name-input" type='text' placeholder='nome do hábito'></input>
-          <DaysDiv>
-            <Days data-test="habit-day" >D</Days>
-            <Days>S</Days>
-            <Days>T</Days>
-            <Days>Q</Days>
-            <Days>Q</Days>
-            <Days>S</Days>
-            <Days>S</Days>
-          </DaysDiv>
-          <ButtonDiv>
-            <div data-test="habit-create-cancel-btn" >Cancelar</div>
-            <button data-test="habit-create-save-btn">Salvar </button>
-          </ButtonDiv>
-        </NewHabit>
+
+        {add && (
+          <AddNewHabit 
+          setAdd={setAdd}/>
+        )}
+
         <p>Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!</p>
 
 

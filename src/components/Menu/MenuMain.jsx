@@ -1,12 +1,13 @@
 import React from 'react'
 import { Menu, HojeDiv } from './StyleMenu'
 import { Link } from 'react-router-dom'
-import { CircularProgressbar } from 'react-circular-progressbar'
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar'
+import "react-circular-progressbar/dist/styles.css"
 
 
 export default function MenuMain() {
  
-  const porcentagem = 'Hoje';
+  const porcentagem = '55';
 
   return (
     <Menu data-test="menu">
@@ -17,7 +18,18 @@ export default function MenuMain() {
 
       <Link to={'/hoje'} data-test="today-link">
         <HojeDiv>
-          <CircularProgressbar value={porcentagem} text='' />
+          <CircularProgressbar 
+          value={porcentagem} 
+          text='Hoje'
+          background
+          backgroundPadding={6}
+          styles={buildStyles({
+            backgroundColor: "#52b6ff",
+            textColor: "#FFFFFF",
+            pathColor: "#FFFFFF",
+            trailColor: "transparent"
+          })}
+          />
         </HojeDiv>
       </Link>
       

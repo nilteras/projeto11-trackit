@@ -2,6 +2,7 @@ import React from 'react'
 import { ContainerMain, Data, HabitosDiv, HabitosText, CheckDiv } from './style'
 import HeaderTop from '../../components/Header/HeaderTop'
 import MenuMain from '../../components/Menu/MenuMain'
+import Check from './../../assets/check.svg'
 
 export default function Hoje() {
   return (
@@ -23,7 +24,7 @@ export default function Hoje() {
           </HabitosText>
 
           <CheckDiv>
-            check
+            <img src={Check} />
           </CheckDiv>
         </HabitosDiv>
 

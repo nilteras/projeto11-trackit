@@ -15,6 +15,7 @@ export const Menu = styled.div`
     line-height: 22px;
     text-align: center;
     color: #52B6FF;
+    
 
     padding: 0 35px;
   
