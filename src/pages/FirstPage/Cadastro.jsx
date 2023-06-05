@@ -95,7 +95,7 @@ export default function Cadastro() {
             Cadastrar
           </button>
         ) : (
-          <ButtonDiv data-test="login-btn" disabled="disabled"> 
+          <ButtonDiv data-test="login-btn" type="submit" disabled="disabled"> 
             <ThreeDots
               height="13"
               width="51"

@@ -102,7 +102,7 @@ export const Days = styled.div`
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    color: #DBDBDB;
+    color: ${props => props.status.color};
 
 `;
 
