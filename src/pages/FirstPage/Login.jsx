@@ -93,8 +93,8 @@ export default function Login() {
         )}
 
       </FormContainer>
-      <Link to={'/cadastro'} data-test="singup-link">
-        <TextoCadastro data-test="singup-link">Não tem uma conta? Cadastre-se!</TextoCadastro>
+      <Link to={'/cadastro'} data-test="signup-link">
+        <TextoCadastro data-test="signup-link">Não tem uma conta? Cadastre-se!</TextoCadastro>
       </Link>
 
     </Container>

@@ -12,7 +12,7 @@ export default function Habitos() {
 
   const [add, setAdd] = useState(false);
 
-  function addTask(){
+  function addTask() {
     setAdd(true);
   }
 
@@ -22,22 +22,23 @@ export default function Habitos() {
       <ContainerMain>
         <Title>
           <h1>Meus Hábitos</h1>
-          <AddButton 
-          data-test="habit-create-btn" 
-          onClick={(addTask)}>
+          <AddButton
+            data-test="habit-create-btn"
+            onClick={(addTask)}>
             <img src={plus} />
           </AddButton>
         </Title>
 
         {add && (
-          <AddNewHabit 
-          setAdd={setAdd}/>
+          <AddNewHabit
+            setAdd={setAdd} />
         )}
 
-          <MyHabits 
-            setAdd={setAdd}
-          />
-       
+        {!add && (
+          <MyHabits
+            setAdd={setAdd} />
+        )}
+
 
 
       </ContainerMain>
